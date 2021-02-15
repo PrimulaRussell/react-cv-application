@@ -35,6 +35,11 @@ class App extends Component{
     </div>
     </div>
     <h1>Education</h1>
+    <div className="Education">
+    <EditableField value={"School Name"}></EditableField>
+    <EditableField value={"Title of Study"}></EditableField>
+    <EditableField value={"Date of Study"}></EditableField>
+    </div>
     </div>
     </div>
   )}

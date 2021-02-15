@@ -4,7 +4,8 @@
   margin: 0;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.Box {
+.Box,
+.Education {
   border: 1px solid black;
   margin: 20px;
   padding: 0 5%;
@@ -17,8 +18,9 @@
   
 }
 
-.generalName {
-  font-size: 20px;
+.generalName,
+.Education {
+  font-size: 25px;
 
 }
 
@@ -27,4 +29,9 @@
   margin-top:25px;
   
   
+}
+
+.Education {
+  text-align: initial;
+
 }
