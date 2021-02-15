@@ -1,3 +1,30 @@
 .App {
   text-align: center;
+  padding: 0;
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.Box {
+  border: 1px solid black;
+  margin: 20px;
+  padding: 0 5%;
+  background-color: #eeeeee;
+}
+
+.General {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.generalName {
+  font-size: 20px;
+
+}
+
+.generalContact {
+  font-size: 10px;
+  margin-top:25px;
+  
+  
 }
