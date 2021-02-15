@@ -14,18 +14,32 @@ class EditableField extends React.Component{
       })
     }
     
+    updateComponentValue = () => {
+      this.setState({
+        isInEditMode: false,
+        value: this.refs.theTextInput.value
+      })
+    }
+
    renderEditView = () => {
       return <div>
-          <input type="text"
+          <input 
+          type="text"
           defaultValue={"Add your " + this.props.value.toString().toLowerCase() + " here!"}
+          ref="theTextInput"
           >
+          
           </input>
+          <button onClick={this.changeEditMode}>X</button>
+          <button onClick={this.updateComponentValue}>OK</button>
+          
         </div>
     }
   
    renderDefaultView = () => {
     return <div onDoubleClick={this.changeEditMode}>
     {this.state.value}
+    
     </div>
     }
   
