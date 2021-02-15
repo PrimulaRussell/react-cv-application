@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Edit.css'
 
 class EditableField extends React.Component{
     constructor(props) {
@@ -22,16 +23,16 @@ class EditableField extends React.Component{
     }
 
    renderEditView = () => {
-      return <div>
-          <input 
+      return <div className="Input">
+          <input className="textInput"
           type="text"
           defaultValue={"Add your " + this.props.value.toString().toLowerCase() + " here!"}
           ref="theTextInput"
           >
           
           </input>
-          <button onClick={this.changeEditMode}>X</button>
-          <button onClick={this.updateComponentValue}>OK</button>
+          <button className="button" onClick={this.changeEditMode}>X</button>
+          <button className="button" onClick={this.updateComponentValue}>OK</button>
           
         </div>
     }
