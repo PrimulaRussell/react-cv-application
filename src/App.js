@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './styles/App.css';
 import Header from './components/Header';
 import EditableField from './components/Edit';
+import Education from './components/Education'
+import AddEdu from './components/AddEdu';
 
 document.body.style.backgroundColor = "#ccc";
 
@@ -14,12 +16,18 @@ class App extends Component{
     }
   }
   
+  addEdu = () => {
+    return <Education></Education>
+  }
+  
   render(){
 
   return(
     <div className="App">
     <Header></Header>
+    {/* Wraps all information inputs */}
     <div className="Box">
+    {/* Section that takes your basic info */}
     <div className="General">
     <div className="generalName">
     <EditableField 
@@ -34,12 +42,11 @@ class App extends Component{
     value={"Phone Number"} />
     </div>
     </div>
+    {/* Section that takes your educational background info */}
     <h1>Education</h1>
-    <div className="Education">
-    <EditableField value={"School Name"}></EditableField>
-    <EditableField value={"Title of Study"}></EditableField>
-    <EditableField value={"Date of Study"}></EditableField>
-    </div>
+    <Education></Education>
+    {/* Creates another education section */}
+    <AddEdu></AddEdu>
     </div>
     </div>
   )}
