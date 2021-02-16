@@ -2,8 +2,12 @@ import React, { Component } from 'react';
 import './styles/App.css';
 import Header from './components/Header';
 import EditableField from './components/Edit';
-import Education from './components/Education'
+import Education from './components/Education';
 import AddEdu from './components/AddEdu';
+import Experience from './components/Experience';
+import AddExp from './components/AddExp';
+
+
 
 document.body.style.backgroundColor = "#ccc";
 
@@ -47,6 +51,11 @@ class App extends Component{
     <Education></Education>
     {/* Creates another education section */}
     <AddEdu></AddEdu>
+    <h1>Experience</h1>
+     {/* Section that takes your professional background info */}
+    <Experience></Experience>
+     {/* Creates another experience section */}
+    <AddExp></AddExp>
     </div>
     </div>
   )}
