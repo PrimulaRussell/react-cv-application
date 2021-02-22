@@ -1,35 +1,30 @@
-import React, { Component } from 'react';
+import React, { useState } from "react";
 import Education from '../components/Education'
 
-class AddEdu extends Component {
-    constructor(props) {
-        super(props)
-    
-        this.state = {
-             numEdu: 0
+const AddEdu = () => {
+    const [num, setNum] = useState(0);
+
+    let addSchool = () => {
+        setNum(num + 1);
         }
-    }
-    onAddSchool = () => {
-    this.setState({
-    numEdu: this.state.numEdu + 1
-    });
-    }
     
-    render() {
-    const schools = [];
+    let schools = [];
 
-    for (var i = 0; i < this.state.numEdu; i += 1) {
-    schools.push(<Education/>);
-    };
+    for (var i = 0; i < num; i += 1) {
+        schools.push(<Education/>);
+        };
 
+    
+           
     return (
     <div>
     {schools}
-    <button onClick={this.onAddSchool.bind(this)}>+ ADD</button>
+    <button onClick={addSchool}>+ ADD</button>
     </div>
     )
-    }
-    }
+};
+    
+    
 
 
 export default AddEdu;
